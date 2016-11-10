@@ -11,18 +11,21 @@ $(document).ready(function(){
 	    }
 	}, false);
 
-	function scrollTo(page) {
+	function scrollingTo(page) {
 		var speed = 500;
 		$('html, body').animate( {
 			scrollTop:$(page).offset().top
 		}, speed);
+	}
+
+	function scrollingMenu(page) {
 		$('.link').removeClass('select');
 		$(page+'L div').addClass('select');
 	}
 
 	$('.scroll').on('click', function() {
 			var page = $(this).attr('href');
-			scrollTo(page);
+			scrollingTo(page);
 			return false;
 		}
 	);
@@ -37,21 +40,32 @@ $(document).ready(function(){
 
 	$(document).keydown(function(e) {
 		var page = getDiv();
+		console.log(e.keyCode);
 		switch(e.keyCode) {
 			case 37:
 			case 38:
-				scrollTo('#'+(page-1));
+				scrollingTo('#'+(page-1));
 				break;
 			case 39:
 			case 40:
-				scrollTo('#'+(page+1));
+				scrollingTo('#'+(page+1));
 				
 				break;
 			case 32:
-				scrollTo('#1');
+				scrollingTo('#1');
 				break;
 		}
 		if(e.keyCode>=97 && e.keyCode<=103)
-			scrollTo('#'+(e.keyCode-96));
-	});		
+			scrollingTo('#'+(e.keyCode-96));
+	});	
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        $('.content').each(function() {
+            if ($(this).offset().top <= scroll) {
+                var page = $(this).attr('id');
+                scrollingMenu('#'+page);
+            }
+        });
+    });
 });
