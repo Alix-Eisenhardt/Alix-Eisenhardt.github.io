@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$('body').css('background-color', '#EEE');
 	$('.content').css('height', height+'px');
+	$('#1L div').addClass('select');
 
 	window.addEventListener("keydown", function(e) {
 	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
