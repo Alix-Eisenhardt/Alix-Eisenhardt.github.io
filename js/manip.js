@@ -1,9 +1,7 @@
 $(document).ready(function(){
 
-	var height = 500;
-
 	$('body').css('background-color', '#EEE');
-	$('.content').css('height', height+'px');
+	$('.content').css('height', '500px');
 	$('#1L div').addClass('select');
 
 	window.addEventListener("keydown", function(e) {
@@ -11,6 +9,13 @@ $(document).ready(function(){
 	        e.preventDefault();
 	    }
 	}, false);
+
+	$('.scroll').on('click', function() {
+			var page = $(this).attr('href');
+			scrollingTo(page);
+			return false;
+		}
+	);
 
 	function scrollingTo(page) {
 		var speed = 500;
@@ -24,23 +29,19 @@ $(document).ready(function(){
 		$(page+'L div').addClass('select');
 	}
 
-	$('.scroll').on('click', function() {
-			var page = $(this).attr('href');
-			scrollingTo(page);
-			return false;
-		}
-	);
-
 	function getDiv(){
 		var scroll = $(window).scrollTop();
-		var curDiv = scroll/height;
-		var curDiv = Math.floor(curDiv, 1);
-		curDiv = Math.ceil(curDiv+1);
-		return curDiv;
+		var page = 0;
+		$('.content').each(function() {
+            if ($(this).offset().top <= scroll) {
+                page = $(this).attr('id');
+            }
+        });
+		return page;
 	}
 
 	$(document).keydown(function(e) {
-		var page = getDiv();
+		var page = parseInt(getDiv());
 		console.log(e.keyCode);
 		switch(e.keyCode) {
 			case 37:
@@ -50,23 +51,19 @@ $(document).ready(function(){
 			case 39:
 			case 40:
 				scrollingTo('#'+(page+1));
-				
 				break;
 			case 32:
 				scrollingTo('#1');
 				break;
 		}
-		if(e.keyCode>=97 && e.keyCode<=103)
+		if(e.keyCode>=97 && e.keyCode<=104)
 			scrollingTo('#'+(e.keyCode-96));
+		else if(e.keyCode>=49 && e.keyCode<=56)
+			scrollingTo('#'+(e.keyCode-48));
 	});	
 
     $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        $('.content').each(function() {
-            if ($(this).offset().top <= scroll) {
-                var page = $(this).attr('id');
-                scrollingMenu('#'+page);
-            }
-        });
+        var page = getDiv();
+        scrollingMenu('#'+page);
     });
 });
