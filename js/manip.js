@@ -58,9 +58,9 @@ $(document).ready(function(){
 				scrollingTo('#1');
 				break;
 		}
-		if(e.keyCode>=97 && e.keyCode<=104)
+		if(e.keyCode>=97 && e.keyCode<=105)
 			scrollingTo('#'+(e.keyCode-96));
-		else if(e.keyCode>=49 && e.keyCode<=56)
+		else if(e.keyCode>=49 && e.keyCode<=57)
 			scrollingTo('#'+(e.keyCode-48));
 	});	
 
@@ -81,16 +81,18 @@ $(document).ready(function(){
 			newState = 'day';
 			$('#state').removeClass(state);
 			$('#state').addClass(newState);
-			$('#main, .flex div').css('background-color', '#EEE');
+			$('#main').css('background-color', '#EEE');
 			$('#main, .flex div').css('color', '#2F2F2F');
 			$('header').css('background-color', '#6F6F6F');
+			$('.flex div').css('background-color', '#DDD');
 		} else {
 			newState = 'night';
 			$('#state').removeClass(state);
 			$('#state').addClass(newState);
-			$('#main, .flex div').css('background-color', '#4F4F4F');
+			$('#main').css('background-color', '#4F4F4F');
 			$('#main, .flex div').css('color', '#EEE');
 			$('header').css('background-color', '#3F3F3F');
+			$('.flex div').css('background-color', '#6F6F6F');
 		}
 		$('#state').html('Change to<br/>'+state+' mode');
 		changeImg(newState);
