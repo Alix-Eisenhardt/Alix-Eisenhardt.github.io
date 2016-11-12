@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
-	$('body').css('background-color', '#EEE');
-	$('.content').css('height', '500px');
+	var currentHour = (new Date).getHours();
+	if((currentHour<20)&&(currentHour>8)) {
+		setState('night');
+	} else {
+		setState('day')
+	}
 	$('#1L div').addClass('select');
 
 	window.addEventListener("keydown", function(e) {
@@ -18,10 +22,9 @@ $(document).ready(function(){
 	);
 
 	function scrollingTo(page) {
-		var speed = 500;
 		$('html, body').animate( {
 			scrollTop:$(page).offset().top
-		}, speed);
+		}, 250);
 	}
 
 	function scrollingMenu(page) {
@@ -29,7 +32,7 @@ $(document).ready(function(){
 		$(page+'L div').addClass('select');
 	}
 
-	function getDiv(){
+	function getPage(){
 		var scroll = $(window).scrollTop();
 		var page = 0;
 		$('.content').each(function() {
@@ -41,8 +44,7 @@ $(document).ready(function(){
 	}
 
 	$(document).keydown(function(e) {
-		var page = parseInt(getDiv());
-		console.log(e.keyCode);
+		var page = parseInt(getPage());
 		switch(e.keyCode) {
 			case 37:
 			case 38:
@@ -63,7 +65,42 @@ $(document).ready(function(){
 	});	
 
     $(window).scroll(function() {
-        var page = getDiv();
+        var page = getPage();
         scrollingMenu('#'+page);
     });
+
+    $('#night').on('click', function() {
+			var state = getState();
+			state = setState(state);
+		}
+	);
+	function setState(state) {
+		if(state=='night') {
+			$('#state').removeClass('night');
+			$('#state').addClass('day');
+			$('#state').html('Change to<br/>night mode');
+			$('#main').css('background-color', '#EEE');
+			$('#main').css('color', '#2F2F2F');
+			$('header').css('background-color', '#6F6F6F');
+		} else {
+			$('#state').removeClass('day');
+			$('#state').addClass('night');
+			$('#state').html('Change to<br/>day mode');
+			$('#main').css('background-color', '#4F4F4F');
+			$('#main').css('color', '#EEE');
+			$('header').css('background-color', '#3F3F3F');
+		}
+	}
+
+	function getState() {
+		var state = $('#state').attr('class');
+		return state;
+	}
+
+	$('#key-index').on('click', function() {
+		$('#k').css('display', 'block');
+		$(document).on('click', function() {
+			$('#k').css('display', 'none');	
+		});
+	});
 });

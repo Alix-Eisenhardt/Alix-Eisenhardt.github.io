@@ -14,6 +14,11 @@ body {
 	font-family: Electrolize;
 }
 
+a, li {
+	text-decoration: none;
+	color: #EEE;
+}
+
 #menu {
 	position: fixed;
 	top: 0;
@@ -22,7 +27,7 @@ body {
 	background-color: #2F2F2F;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	justify-content: flex-start;
 	padding-top: 10px;
 	color: #EEE;
 }
@@ -34,13 +39,14 @@ body {
 	box-shadow: 0px 2px 2px #111;
 }
 
-#photo, #photo img{
+#photo{
 	height: 180px;
 	width: 180px;
 }
 
 #infos {
 	padding: 5px;
+	padding-top: 0;
 }
 
 .scroll {
@@ -55,9 +61,14 @@ body {
 	box-shadow: 0px 2px 2px #111;
 }
 
+.link:hover {
+	box-shadow: none;
+	font-size: 1.1em;
+}
+
 .select {
 	background-color: #EEE;
-	color: #2F2F2F;
+	color: #4F4F4F;
 	box-shadow: none;
 	font-size: 1.1em;
 }
@@ -79,15 +90,85 @@ body {
 #main {
 	margin: auto;
 	margin-left: 200px;
-	color: #2F2F2F;
+}
+
+#state {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+	color: #EEE;
+	background-color: #2F2F2F;
+	box-shadow: 0 1px 2px #111;
+	z-index: 42;
 }
 
 .content {
-	border-bottom: solid 1px black;
-	padding: 10px;
+	padding-bottom: 20px;
 }
 
-a, li {
-	text-decoration: none;
+.content header {
+	width: 100%-10px;
+	box-shadow: 0 1px 10px #111;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding: 0 10px 10px 10px;
+	font-size: 3em;
 	color: #EEE;
+}
+
+.content header img {
+	position: relative;
+	top: 10px;
+	left: 30px;
+	width: 102px;
+	height: 102px;
+}
+
+.content header span {
+	position: relative;
+	top: -20px;
+	left: 50px;
+}
+
+.content article {
+	padding: 10px 10px 30px 10px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex div {
+	min-width: 20%;
+	padding: 10px;
+	box-shadow: 0 1px 2px #111;
+	background-color: #6F6F6F;
+	color: #EEE;
+}
+
+.flex div img {
+	vertical-align: middle;
+	width: 60px;
+	height: 60px;
+}
+
+.flex div span {
+	display: inline-block;
+	position: relative;
+	top: 1.1em;
+}
+
+#k {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background-color: #4F4F4F;
+	color: #EEE;
+	z-index: 666;
 }
