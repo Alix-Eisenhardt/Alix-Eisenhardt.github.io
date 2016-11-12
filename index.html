@@ -37,7 +37,7 @@
 		<a id='8L' class='scroll' href="#8">
 			<div class="link">8/ References</div>
 		</a>
-		<a id='key-index' href="#k">
+		<a id='key_open'>
 			<div id="keyboard">
 				<img src="images/keyboard.png" />
 				Navigate with your keyboard!
@@ -56,22 +56,22 @@
     		</header>
     		<article class='flex'>
 	    		<div>
-	    			<img src="images/birth.png" />
+	    			<img id='birth' class ='data_img' src="images/birth.png" />
 		    		Feb. 5 1997
 	    		</div>
 	    		<div>
-	    			<img src="images/adress.png" />
+	    			<img id='adress' class ='data_img' src="images/adress.png" />
 		    		<span>
 		    			473 route du collège<br/>
 		    			74330 POISY, France
 	    			</span>
 	    		</div>
 	    		<div>
-	    			<img src="images/tel.png" />
+	    			<img id='tel' class ='data_img' src="images/tel.png" />
 		    		+33(0)7 89 67 40 70
 	    		</div>
 	    		<div>
-	    			<img src="images/email.png" />
+	    			<img id='email' class ='data_img' src="images/email.png" />
 		    		alix.vuagnoux@gmail.com
 	    		</div>
 	    	</article>
@@ -174,11 +174,13 @@
 	    	</article>
     	</section>
   	</div>
-	<footer id=k>
-		Use arrows to navigate on this website !<br/>
-		Space allows you to go to the top of the page<br/>
-		You can go to each section by typping its number
-	</footer>
+  	<a id='key_close'>
+		<div id='k'>
+			Use arrows to navigate on this website !<br/>
+			Space allows you to go to the top of the page<br/>
+			You can go to each section by typping its number
+		</div>
+	</a>
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/manip.js"></script>
