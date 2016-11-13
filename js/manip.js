@@ -57,6 +57,10 @@ $(document).ready(function(){
 			case 32:
 				scrollingTo('#1');
 				break;
+			case 48:
+			case 96:
+				setState(getState());
+				break;
 		}
 		if(e.keyCode>=97 && e.keyCode<=105)
 			scrollingTo('#'+(e.keyCode-96));
@@ -112,7 +116,8 @@ $(document).ready(function(){
 	}
 
 	$('#key_open').on('click', function() {
-		$('#k').css('display', 'block');
+		$('#k').css('display', 'flex');
+		$('.k_img').css('display', 'initial');
 	});
 
 	$('#key_close').on('click', function() {
