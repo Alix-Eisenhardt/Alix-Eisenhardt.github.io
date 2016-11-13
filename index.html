@@ -58,23 +58,25 @@
 				<span>Personal Data</span>
 			</header>
 			<article class='flex'>
-				<div>
-					<img id='birth' class ='data_img' src='images/birth.png' />
+				<div class='part'>
+					<img id='birth' class ='data_img flex_img' src='' />
 					Feb. 5 1997
 				</div>
-				<div>
-					<img id='adress' class ='data_img' src='images/adress.png' />
-					<span>
+				<div class='part'>
+					<img id='adress' class ='data_img flex_img' src='' />
+					<span class='float'>
 						473 route du collège<br/>
 						74330 POISY, France
 					</span>
 				</div>
-				<div>
-					<img id='tel' class ='data_img' src='images/tel.png' />
+			</article>
+			<article class='flex'>
+				<div class='part'>
+					<img id='tel' class ='data_img flex_img' src='' />
 					+33(0)7 89 67 40 70
 				</div>
-				<div>
-					<img id='email' class ='data_img' src='images/email.png' />
+				<div class='part'>
+					<img id='email' class ='data_img flex_img' src='' />
 					alix.vuagnoux@gmail.com
 				</div>
 			</article>
@@ -94,18 +96,18 @@
 				<span>Interests</span>
 			</header>
 			<article class='flex'>
-				<div>
-					<img id='science' class ='data_img' src='' />
+				<div class='part'>
+					<img class ='flex_img' src='images/science.png' />
 					<strong>Mathematics and Physics</strong><br/><br/>
 					I really love sciences
 				</div>
-				<div>
-					<img id='psychology' class ='data_img' src='' />
+				<div class='part'>
+					<img class ='flex_img' src='images/psychology.png' />
 					<strong>Psychatry and psychology</strong><br/><br/>
 					I'd like to be a psychiatrist !
 				</div>
-				<div>
-					<img id='book' class ='data_img' src='' />
+				<div class='part'>
+					<img class ='flex_img' src='images/book.png' />
 					<strong>Comics and Mangas</strong><br/><br/>
 					I spend too many time reading them
 				</div>
@@ -116,8 +118,40 @@
 				<img src='images/4.png' />
 				<span>Personal Skills</span>
 			</header>
-			<article>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem est, consectetur ac bibendum at, consectetur sed ex. Aenean blandit facilisis lorem, laoreet dictum orci malesuada nec. Pellentesque ultrices justo nisi, sit amet rhoncus nisi mollis ut. Morbi quis pellentesque felis. In malesuada dictum pretium. Nam dapibus vitae neque id vehicula. Vivamus felis lectus, faucibus quis eros at, tincidunt efficitur justo. Nam efficitur dapibus sapien. Nunc et mauris purus. Aenean scelerisque, ante sit amet laoreet mattis, felis risus facilisis ligula, sit amet sollicitudin neque dui id sem. Integer iaculis est ac lacus aliquam, in porta massa congue. Nulla faucibus nibh non lacinia varius. Mauris maximus interdum ultrices. In hac habitasse platea dictumst.
+			<article class='flex'>
+				<div class='part'>
+					<img class ='flex_img' src='images/gears.png' />
+					<span class='float'>
+						I can easily understand <br/>how things works
+					</span>
+				</div>
+				<div class='part'>
+					<img class ='flex_img' src='images/lamp.png' />
+					I am creative an innovative
+				</div>
+				<div class='part'>
+					<img class ='flex_img' src='images/hours.png' />
+					<span class='float'>
+						If something motives me, <br/>i can spent all my days on it
+					</span>
+				</div>
+			</article>
+			<article id='languages'>
+				<strong>Languages</strong>
+				<div class='flex'>
+					<div class='part'>
+						French - Native
+						<progress value="10" max="10"></progress>
+					</div>
+					<div class='part'>
+						English - B2
+						<progress value="6" max="10"></progress>
+					</div>
+					<div class='part'>
+						Spanish - A2
+						<progress value="3" max="10"></progress>
+					</div>
+				</div>
 			</article>
 		</section>
 		<section id=5 class='content'>
@@ -125,8 +159,53 @@
 				<img src='images/5.png' />
 				<span>Technical Skills</span>
 			</header>
-			<article>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem est, consectetur ac bibendum at, consectetur sed ex. Aenean blandit facilisis lorem, laoreet dictum orci malesuada nec. Pellentesque ultrices justo nisi, sit amet rhoncus nisi mollis ut. Morbi quis pellentesque felis. In malesuada dictum pretium. Nam dapibus vitae neque id vehicula. Vivamus felis lectus, faucibus quis eros at, tincidunt efficitur justo. Nam efficitur dapibus sapien. Nunc et mauris purus. Aenean scelerisque, ante sit amet laoreet mattis, felis risus facilisis ligula, sit amet sollicitudin neque dui id sem. Integer iaculis est ac lacus aliquam, in porta massa congue. Nulla faucibus nibh non lacinia varius. Mauris maximus interdum ultrices. In hac habitasse platea dictumst.
+			<article class='flex'>
+				<div class='part'>
+					<img class='flex_img' src='images/html.png' />
+					<strong>HTML5 - CSS3</strong><br/><br/>
+					<progress value="10" max="10"></progress>
+				</div>
+				<div class='part'>
+					<img class='flex_img' src='images/js.png' />
+					<strong>Javascript - jQuery</strong><br/><br/>
+					<progress value="8" max="10"></progress>
+				</div>
+			</article>
+			<article class='flex'>
+				<div class='part'>
+					<img class='flex_img' src='images/php.png' />
+					<strong>PHP</strong><br/><br/>
+					<progress value="8" max="10"></progress>
+				</div>
+				<div class='part'>
+					<img class='flex_img' src='images/wordpress.png' />
+					<strong>Wordpress</strong><br/><br/>
+					<progress value="6" max="10"></progress>
+				</div>
+			</article>
+			<article class='flex'>
+				<div class='part'>
+					<img class='flex_img' src='images/sql.png' />
+					<strong>PostgreSQL</strong><br/><br/>
+					<progress value="6" max="10"></progress>
+				</div>
+				<div class='part'>
+					<img class='flex_img' src='images/oracle.png' />
+					<strong>Oracle</strong><br/><br/>
+					<progress value="4" max="10"></progress>
+				</div>
+			</article>
+			<article class='flex'>
+				<div class='part'>
+					<img class='flex_img' src='images/c.png' />
+					<strong>C</strong><br/><br/>
+					<progress value="6" max="10"></progress>
+				</div>
+				<div class='part'>
+					<img class='flex_img' src='images/csharp.png' />
+					<strong>C#</strong><br/><br/>
+					<progress value="4" max="10"></progress>
+				</div>
 			</article>
 		</section>
 		<section id=6 class='content'>
@@ -134,8 +213,46 @@
 				<img src='images/6.png' />
 				<span>Experiences</span>
 			</header>
-			<article>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem est, consectetur ac bibendum at, consectetur sed ex. Aenean blandit facilisis lorem, laoreet dictum orci malesuada nec. Pellentesque ultrices justo nisi, sit amet rhoncus nisi mollis ut. Morbi quis pellentesque felis. In malesuada dictum pretium. Nam dapibus vitae neque id vehicula. Vivamus felis lectus, faucibus quis eros at, tincidunt efficitur justo. Nam efficitur dapibus sapien. Nunc et mauris purus. Aenean scelerisque, ante sit amet laoreet mattis, felis risus facilisis ligula, sit amet sollicitudin neque dui id sem. Integer iaculis est ac lacus aliquam, in porta massa congue. Nulla faucibus nibh non lacinia varius. Mauris maximus interdum ultrices. In hac habitasse platea dictumst.
+			<article class='flex'>
+				<div class='part experiences'>
+					2017 - Projet NINA<br/>
+					&emsp;M. Bavay Ludovic - IUT Annecy<br/><br/>
+					&emsp;Conception and development of an hidden daemon <br/>
+					&emsp;which navigate on the Internet to deceive <br/>
+					&emsp;advertising. Developed in C and running on Debian.
+				</div>
+				<div class='part experiences'>
+					2017 - Portfolio<br/>
+					&emsp;Internal project - IUT Annecy<br/><br/>
+					&emsp;Conception and development of a dynamic Portfolio<br/>
+					&emsp;written in english, using Javascript
+				</div>
+			</article>
+			<article class='flex'>
+				<div class='part experiences'>
+					2016 - TripAdvisor<br/>
+					&emsp;Internal project - IUT Annecy<br/><br/>
+					&emsp;Conception and development of a dynamic website <br/>
+					&emsp;based on TripAdvisor. Developed from scratch in <br/>
+					&emsp;PHP Object with a PostgreSQL database
+				</div>
+				<div class='part experiences'>
+					2016 - The 404<br/>
+					&emsp;Internal project - IUT Annecy<br/><br/>
+					&emsp;Conception and development of a dynamic website <br/>
+					&emsp;for UIT Info department using Wordpress.
+				</div>
+			</article>
+			<article class='flex'>
+				<div class='part experiences'>
+					2014 - SmartHouse<br/>
+					&emsp;Internal project - Lycée Louis Lachenal<br/><br/>
+					&emsp;Conception and development of an WEB application <br/>
+					&emsp;to control electronic equipment of an house <br/>
+					&emsp;model with an Arduino card.
+				</div>
+				<div class='part experiences' style='visibility: hidden;'>
+				</div>
 			</article>
 		</section>
 		<section id=7 class='content'>
@@ -144,15 +261,23 @@
 				<span>Education</span>
 			</header>
 			<article class='flex'>
-				<div>
-					2017 - DUT INFO<br/>
-					&emsp;IUT - Université de Savoie - Annecy, France<br/>
-					&emsp;University Technical Diploma in computer egineering
+				<div class='part'>
+					2015-2017 - DUT INFO<br/>
+					&emsp;IUT Annecy - Annecy, France<br/>
+					&emsp;<img class='diploma' src='images/diploma.png'>
+					University Technical Diploma in<br/>
+					&emsp;computer egineering
 				</div>
-				<div>
+				<div class='part'>
+					2014-2015 - CPGE PC<br/>
+					&emsp;Lycée Berthollet - Annecy, France<br/>
+				</div>
+				<div class='part'>
 					2014 - Baccalauréat STI2D (SIN)<br/>
-					&emsp;&emsp;Lycée Louis Lachenal - Argonay, France<br/>
-					&emsp;&emsp;High-school diploma in computer science with honors
+					&emsp;Lycée Louis Lachenal - Argonay, France<br/>
+					&emsp;<img class='diploma' src='images/diploma.png'>
+					High-school diploma in computer<br/>
+					&emsp;science with honors
 				</div>
 			</article>
 		</section>
@@ -162,15 +287,15 @@
 				<span>References</span>
 			</header>
 			<article class='flex'>
-				<div>
+				<div class='part'>
 					Stephanie Bouchon<br/>
 					&emsp;English teacher - IUT Annecy<br/>
 					&emsp;stephanie.bouchon@univ-savoie.fr
 				</div>
-				<div>
-					2014 - Baccalauréat STI2D (SIN)<br/>
-					&emsp;azertyuiopqsdfghjklmwxcvbn<br/>
-					&emsp;azertyuiopqsdfghjklmwxcvbn
+				<div class='part'>
+					Pascal Colin<br/>
+					&emsp;INFO department's director - IUT Annecy<br/>
+					&emsp;pascal.colin@univ-savoie.fr
 				</div>
 			</article>
 		</section>
@@ -179,14 +304,31 @@
 				<img src='images/9.png' />
 				<span>Contact</span>
 			</header>
-			<article class='flex'>
-				<div>
-					Social Medias<br/>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem est, consectetur ac bibendum at, consectetur sed ex. Aenean blandit facilisis lorem, laoreet dictum orci malesuada nec. Pellentesque ultrices justo nisi, sit amet rhoncus nisi mollis ut. Morbi quis pellentesque felis. In malesuada dictum pretium. Nam dapibus vitae neque id vehicula. Vivamus felis lectus, faucibus quis eros at, tincidunt efficitur justo. Nam efficitur dapibus sapien. Nunc et mauris purus. Aenean scelerisque, ante sit amet laoreet mattis, felis risus facilisis ligula, sit amet sollicitudin neque dui id sem. Integer iaculis est ac lacus aliquam, in porta massa congue. Nulla faucibus nibh non lacinia varius. Mauris maximus interdum ultrices. In hac habitasse platea dictumst.
+			<article id='contact' class='flex'>
+				<div class='part'>
+					<strong>Download my CV</strong><br/>
+					<a>
+						<img class='flex_img' src='images/pdf.png'/>
+					</a>
 				</div>
-				<div>
-					Contact Form<br/>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem est, consectetur ac bibendum at, consectetur sed ex. Aenean blandit facilisis lorem, laoreet dictum orci malesuada nec. Pellentesque ultrices justo nisi, sit amet rhoncus nisi mollis ut. Morbi quis pellentesque felis. In malesuada dictum pretium. Nam dapibus vitae neque id vehicula. Vivamus felis lectus, faucibus quis eros at, tincidunt efficitur justo. Nam efficitur dapibus sapien. Nunc et mauris purus. Aenean scelerisque, ante sit amet laoreet mattis, felis risus facilisis ligula, sit amet sollicitudin neque dui id sem. Integer iaculis est ac lacus aliquam, in porta massa congue. Nulla faucibus nibh non lacinia varius. Mauris maximus interdum ultrices. In hac habitasse platea dictumst.
+				<div class='part'>
+					<strong>Social Medias</strong><br/>
+					<a href='http://github.com/Alix-Eisenhardt'>
+						<div>
+							<img class='social_img' src='images/github.png'/>
+							GitHub
+						</div>
+					</a>
+					<a href='http://www.linkedin.com/in/alix-vuagnoux'>
+						<div>
+							<img class='social_img' src='images/linkedin.png'/>
+							LinkedIn
+						</div>
+					</a>
+				</div>
+				<div class='part'>
+					<strong>Contact Me !</strong><br/>
+					(not implemented yet)
 				</div>
 			</article>
 		</section>

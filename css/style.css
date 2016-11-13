@@ -19,6 +19,10 @@ a, li {
 	color: #EEE;
 }
 
+img {
+	margin-right: 10px;
+}
+
 #menu {
 	position: fixed;
 	top: 0;
@@ -30,6 +34,7 @@ a, li {
 	justify-content: flex-start;
 	padding-top: 10px;
 	color: #EEE;
+	box-shadow: 1px 0 2px #111;
 }
 
 #me {
@@ -84,7 +89,7 @@ a, li {
 
 #keyboard img {
 	width: 180px;
-	height: 80px;
+	height: 70px;
 }
 
 #main {
@@ -121,8 +126,8 @@ a, li {
 .content header img {
 	position: relative;
 	top: 10px;
-	width: 102px;
-	height: 102px;
+	width: 100px;
+	height: 100px;
 }
 
 .content header span {
@@ -131,7 +136,7 @@ a, li {
 }
 
 .content article {
-	padding: 10px 10px 30px 10px;
+	padding: 10px;
 }
 
 .flex {
@@ -139,24 +144,57 @@ a, li {
 	justify-content: space-around;
 }
 
-.flex div {
-	min-width: 20%;
+.part {
+	min-width: 30%;
 	padding: 10px;
 	box-shadow: 0 1px 1px #111;
 	background-color: #6F6F6F;
 	color: #EEE;
 }
 
-.flex div img {
+.experiences {
+	min-width: 40%;
+}
+
+.flex_img {
 	vertical-align: middle;
 	width: 60px;
 	height: 60px;
 }
 
-.flex div span {
+.float {
 	display: inline-block;
 	position: relative;
-	top: 1.1em;
+	top: 0.6em;
+}
+
+progress {
+	width: 100%;
+}
+
+#languages {
+	text-align: center;
+}
+
+#languages .flex {
+	margin-top: 10px;
+}
+
+.diploma {
+	margin-right: 0;
+	height: 10px;
+	width: auto;
+}
+
+#contact .part div {
+	margin-top: 10px;
+}
+
+.social_img{
+	vertical-align: top;
+	margin-right: 5px;
+	height: 20px;
+	width: auto;
 }
 
 footer {
@@ -187,14 +225,11 @@ footer {
 	box-shadow: 0 1px 2px #111;
 	padding: 10px;
 	text-align: center;
-	max-width: 20%;
-}
-
-#k div img {
-	margin-bottom: 10px;
+	max-width: 23%;
 }
 
 .k_img {
 	width: 150px;
 	height: auto;
+	margin-bottom: 10px;
 }

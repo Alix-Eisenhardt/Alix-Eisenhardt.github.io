@@ -86,17 +86,17 @@ $(document).ready(function(){
 			$('#state').removeClass(state);
 			$('#state').addClass(newState);
 			$('#main').css('background-color', '#EEE');
-			$('#main, .flex div').css('color', '#2F2F2F');
+			$('#main, .part').css('color', '#2F2F2F');
 			$('header').css('background-color', '#6F6F6F');
-			$('.flex div').css('background-color', '#DDD');
+			$('.part').css('background-color', '#DDD');
 		} else {
 			newState = 'night';
 			$('#state').removeClass(state);
 			$('#state').addClass(newState);
 			$('#main').css('background-color', '#4F4F4F');
-			$('#main, .flex div').css('color', '#EEE');
+			$('#main, .part').css('color', '#EEE');
 			$('header').css('background-color', '#3F3F3F');
-			$('.flex div').css('background-color', '#6F6F6F');
+			$('.part').css('background-color', '#6F6F6F');
 		}
 		$('#state').html('Change to<br/>'+state+' mode');
 		changeImg(newState);
@@ -117,7 +117,6 @@ $(document).ready(function(){
 
 	$('#key_open').on('click', function() {
 		$('#k').css('display', 'flex');
-		$('.k_img').css('display', 'initial');
 	});
 
 	$('#key_close').on('click', function() {
