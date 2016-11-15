@@ -239,6 +239,15 @@ footer {
 	align-items: center;
 }
 
+.center {
+	background-color: #6F6F6F;
+	color: #EEE;
+	box-shadow: 0 1px 2px #111;
+	padding: 10px;
+	text-align: center;
+	margin: 0 10px;
+}
+
 #k div div {
 	background-color: #6F6F6F;
 	color: #EEE;
@@ -251,12 +260,14 @@ footer {
 .k_img {
 	width: 100px;
 	height: auto;
+	margin-right: 0;
 	margin-bottom: 10px;
 }
 
 .k_img_wtf {
 	width: 100px;
 	height: 100px;
+	margin-right: 0;
 	margin-bottom: 10px;
 }
 

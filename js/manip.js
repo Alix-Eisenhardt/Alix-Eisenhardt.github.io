@@ -10,7 +10,7 @@ $(document).ready(function(){
 		setState('day');
 	}
 
-	$('#1L div').addClass('select');
+	scrollingTo('#1');
 
 	window.addEventListener("keydown", function(e) {
 	    if([13, 27, 32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
@@ -67,7 +67,6 @@ $(document).ready(function(){
 			case 96:
 				setState(getState());
 				break;
-			case 13:
 			case 27:
 				keyIndex();
 				break;
