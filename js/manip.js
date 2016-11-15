@@ -4,10 +4,10 @@ $(document).ready(function(){
 	var n = 0;
 
 	var currentHour = (new Date).getHours();
-	if((currentHour<20)&&(currentHour>8)) {
-		setState('day');
-	} else {
+	if((currentHour<20)&&(currentHour>=8)) {
 		setState('night');
+	} else {
+		setState('day');
 	}
 
 	$('#1L div').addClass('select');
@@ -158,6 +158,7 @@ $(document).ready(function(){
 	});
 
 	function konami() {
-		alert('Did you just loose ?');
+		$('#panic').css('display', 'initial');
+		$('#panic').fadeOut(2000);
 	}
 });
