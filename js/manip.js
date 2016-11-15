@@ -13,7 +13,7 @@ $(document).ready(function(){
 	$('#1L div').addClass('select');
 
 	window.addEventListener("keydown", function(e) {
-	    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+	    if([13, 27, 32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
 	        e.preventDefault();
 	    }
 	}, false);
@@ -66,6 +66,10 @@ $(document).ready(function(){
 			case 48:
 			case 96:
 				setState(getState());
+				break;
+			case 13:
+			case 27:
+				keyIndex();
 				break;
 		}
 		if(e.keyCode>=97 && e.keyCode<=105)
@@ -121,13 +125,26 @@ $(document).ready(function(){
 		return state;
 	}
 
-	$('#key_open').on('click', function() {
-		$('#k').css('display', 'flex');
+	$('.key').on('click', function() {
+		keyIndex();
 	});
 
 	$('#key_close').on('click', function() {
 		$('#k').css('display', 'none');
 	});
+
+	function keyIndex() {
+		if($('#k').attr('class') == 'hidden') {
+			$('#k').removeClass('hidden');
+			$('#k').addClass('show');
+			$('#k').css('display', 'flex');
+		}
+		else {
+			$('#k').removeClass('show');
+			$('#k').addClass('hidden');
+			$('#k').css('display', 'none');
+		}
+	}
 
 	$(document).keydown(function(e) {
 		if(e.key == kCode[n++]) {
