@@ -1,11 +1,15 @@
 $(document).ready(function(){
 
+	var kCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown', 'ArrowLeft','ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+	var n = 0;
+
 	var currentHour = (new Date).getHours();
 	if((currentHour<20)&&(currentHour>8)) {
-		setState('night');
+		setState('day');
 	} else {
-		setState('day')
+		setState('night');
 	}
+
 	$('#1L div').addClass('select');
 
 	window.addEventListener("keydown", function(e) {
@@ -24,7 +28,7 @@ $(document).ready(function(){
 	function scrollingTo(page) {
 		$('html, body').animate( {
 			scrollTop:$(page).offset().top
-		}, 250);
+		}, 500);
 	}
 
 	function scrollingMenu(page) {
@@ -48,11 +52,13 @@ $(document).ready(function(){
 		switch(e.keyCode) {
 			case 37:
 			case 38:
-				scrollingTo('#'+(page-1));
+				if(page!=1)
+					scrollingTo('#'+(page-1));
 				break;
 			case 39:
 			case 40:
-				scrollingTo('#'+(page+1));
+				if(page!=9)
+					scrollingTo('#'+(page+1));
 				break;
 			case 32:
 				scrollingTo('#1');
@@ -66,7 +72,7 @@ $(document).ready(function(){
 			scrollingTo('#'+(e.keyCode-96));
 		else if(e.keyCode>=49 && e.keyCode<=57)
 			scrollingTo('#'+(e.keyCode-48));
-	});	
+	});
 
     $(window).scroll(function() {
         var page = getPage();
@@ -122,4 +128,19 @@ $(document).ready(function(){
 	$('#key_close').on('click', function() {
 		$('#k').css('display', 'none');
 	});
+
+	$(document).keydown(function(e) {
+		if(e.key == kCode[n++]) {
+			if(n == kCode.length) {
+				konami();
+				n=0;
+			}
+		} else {
+			n = 0;
+		}
+	});
+
+	function konami() {
+		alert('Did you just loose ?');
+	}
 });
